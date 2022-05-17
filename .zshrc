@@ -102,10 +102,6 @@ if [[ ! -d $ZSH_CACHE_DIR ]]; then
 fi
 
 source $ZSH/oh-my-zsh.sh
-export DATABASE_URL=mysql://root:root@localhost:3306/radical
-export PATH=$PATH:/usr/lib/jvm/java-17-openjdk/bin
-
-export PATH="$(yarn global bin):$PATH"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -116,3 +112,5 @@ if [ -f '/home/spencer/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/home
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/home/spencer/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/spencer/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
+
+alias vim=nvim
