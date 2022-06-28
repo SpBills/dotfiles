@@ -1,14 +1,12 @@
 call plug#begin(stdpath('data') . '/plugged')
 Plug 'preservim/nerdtree'
-Plug 'ryanoasis/vim-devicons'
 Plug 'puremourning/vimspector'
 Plug 'tanvirtin/monokai.nvim'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lockfile'}
 Plug 'pangloss/vim-javascript'
 Plug 'leafgarland/typescript-vim'
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'ziglang/zig.vim'
+Plug 'ryanoasis/vim-devicons'
 call plug#end()
 
 " close auto if last
@@ -25,11 +23,12 @@ nmap <leader>dw :VimspectorWatch
 nmap <leader>do :VimspectorShowOutput
 let g:vimspector_install_gadgets = [ 'debugpy', 'vscode-go', 'CodeLLDB' ]
 
-set guifont=DroidSansMono\ Nerd\ Font\ 11
+set guifont=3270\ Nerd\ Font\ 11
 nnoremap <C-b> :NERDTreeToggle<CR>
 
 " vim stuff
 filetype plugin indent on
+set encoding=UTF-8
 set expandtab
 set relativenumber
 set tabstop=2
@@ -37,4 +36,3 @@ set softtabstop=2
 set shiftwidth=2
 set colorcolumn=80
 syntax on
-colorscheme monokai
